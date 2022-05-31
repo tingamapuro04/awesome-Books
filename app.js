@@ -22,7 +22,7 @@ class UI {
     row.innerHTML = `
     <td>${book.title} by ${book.author}</td>
 
-    <td><a href='#' class="btn btn-danger btn-sm delete">Remove</a></td>
+    <td class="d-flex justify-content-end"><a href='#' class="btn btn-light border border-dark btn-sm delete ">Remove</a></td>
     `;
 
     list.appendChild(row)
