@@ -9,7 +9,7 @@ class Book {
   static displayBooks() {
     const books = Book.getBooks();
 
-    books.forEach((book) => addBookToList(book));
+    books.forEach((book) => Book.addBookToList(book));
   }
 
   static addBookToList(book) {
@@ -61,8 +61,6 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
-
-
  
 // Events: display books
 document.addEventListener('DOMContentLoaded', Book.displayBooks());
@@ -75,7 +73,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const author = document.querySelector('#author').value;
 
    // Instantiate book
-   const book = new Book(title, author);
+  const book = new Book(title, author);
 
   // add Book to UI
   Book.addBookToList(book);
