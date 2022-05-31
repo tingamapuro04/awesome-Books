@@ -1,0 +1,35 @@
+.all-box {
+  max-width: 600px;
+  margin-top: 1%;
+}
+
+.table-box {
+  border: 3px solid black;
+}
+
+hr:not([size]) {
+  height: 2.5px;
+  background: black;
+}
+
+.hr {
+  max-width: 100px;
+  color: blue;
+  border: none;
+  margin-left: 45%;
+  margin-top: 3%;
+}
+
+.add-box {
+  max-width: 380px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.vutton {
+  margin-left: 75%;
+}
