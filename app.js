@@ -65,14 +65,9 @@ class Store {
   }
   //remove book
 
-  static removeBook(author) {
-    const books = Store.getBooks()
-
-    books.forEach((book, index) => {
-      if(book.author === author) {
-        books.splice(index, 1)
-      }
-    })
+  static removeBook(index) {
+    const books = Store.getBooks(index)
+    books.splice(index, 1)
     localStorage.setItem('books', JSON.stringify(books))
   }
 }
