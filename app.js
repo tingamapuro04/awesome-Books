@@ -61,7 +61,7 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
- 
+
 // Events: display books
 document.addEventListener('DOMContentLoaded', Book.displayBooks());
 
@@ -72,7 +72,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
 
-   // Instantiate book
+  // Instantiate book
   const book = new Book(title, author);
 
   // add Book to UI
