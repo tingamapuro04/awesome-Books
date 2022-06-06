@@ -6,14 +6,14 @@ export default class Book {
   }
 
   // method to handle ui
-  static displayBooks() {
+  static displayBooks = () => {
     const books = Book.getBooks();
 
     books.forEach((book) => Book.addBookToList(book));
   }
 
   // Add book
-  static addBookToList(book) {
+  static addBookToList = (book) => {
     const list = document.getElementById('book-list');
     const row = document.createElement('tr');
 
@@ -27,20 +27,16 @@ export default class Book {
   }
 
   // Delete a book
-  static deleteBook(el) {
+  static deleteBook = (el) => {
     if (el.classList.contains('delete')) {
       el.parentElement.parentElement.remove();
     }
   }
 
   // Clear input fields after an entry
-  static clearfields() {
-    document.querySelector('#title').value = '';
-    document.querySelector('#author').value = '';
-  }
 
   // methods to handle storage
-  static getBooks() {
+  static getBooks = () => {
     let books;
     if (localStorage.getItem('books') === null) {
       books = [];
@@ -51,14 +47,20 @@ export default class Book {
   }
 
   // add book
-  static addBook(book) {
+  static addBook = (book) => {
     const books = Book.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
+
+  // clear
+  static clearfields = () => {
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+  }
   // remove book
 
-  static removeBook(index) {
+  static removeBook = (index) => {
     const books = Book.getBooks(index);
     books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(books));

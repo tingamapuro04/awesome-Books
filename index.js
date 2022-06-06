@@ -66,6 +66,7 @@ contactUs.addEventListener('click', () => {
 
 window.addEventListener('load', () => {
   listComplete.style.display = 'block';
+  awesomeH1.style.display = 'block';
 });
 
 date.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
