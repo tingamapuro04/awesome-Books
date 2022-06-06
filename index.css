@@ -1,0 +1,134 @@
+header {
+  margin: 1% 2% 5% 2%;
+}
+
+.fClass {
+  width: 45%;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.fClass h1 {
+  font-size: 1.2rem;
+  font-weight: 450;
+}
+
+.sClass {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.awesome-h1 {
+  display: none;
+}
+
+.navbar-expand-lg .navbar-nav {
+  margin-left: 70%;
+  margin-right: 0;
+}
+
+.navbar-light .navbar-nav .nav-link .firstOne {
+  margin-left: 40%;
+}
+
+.sUl li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.sUl li a:hover {
+  color: rgba(39, 39, 179, 0.63);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(49, 49, 175, 0.767);
+}
+
+.Date {
+  display: flex;
+  justify-content: end;
+}
+
+.all-box {
+  margin: 1% 2% 1% 2%;
+  display: none;
+  overflow-y: auto;
+  position: relative;
+}
+
+.table-box {
+  border: 3px solid black;
+  width: 100%;
+}
+
+hr:not([size]) {
+  height: 2.5px;
+  background: black;
+}
+
+.hr {
+  max-width: 100px;
+  color: blue;
+  border: none;
+  margin-left: 45%;
+  margin-top: 3%;
+}
+
+.add-box {
+  max-width: 380px;
+  text-align: center;
+  margin-top: 6rem;
+  display: none;
+}
+
+.heading {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.vutton {
+  margin-left: 75%;
+}
+
+.contact {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+
+/* #contact7 {
+  display: none;
+} */
+
+footer {
+  position: fixed;
+  top: 90vh;
+  left: 0.3%;
+  right: 0.3%;
+  border: 3px solid black;
+  margin: 0 2% 0 2%;
+}
+
+@media (max-width: 990px) {
+  .sipan {
+    display: none;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

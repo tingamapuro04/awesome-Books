@@ -1,5 +1,5 @@
 // Book class: Represents a book
-class Book {
+export default class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
@@ -12,6 +12,7 @@ class Book {
     books.forEach((book) => Book.addBookToList(book));
   }
 
+  // Add book
   static addBookToList(book) {
     const list = document.getElementById('book-list');
     const row = document.createElement('tr');
@@ -25,12 +26,14 @@ class Book {
     list.appendChild(row);
   }
 
+  // Delete a book
   static deleteBook(el) {
     if (el.classList.contains('delete')) {
       el.parentElement.parentElement.remove();
     }
   }
 
+  // Clear input fields after an entry
   static clearfields() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
@@ -61,36 +64,3 @@ class Book {
     localStorage.setItem('books', JSON.stringify(books));
   }
 }
-
-// Events: display books
-document.addEventListener('DOMContentLoaded', Book.displayBooks());
-
-// Event: add a book
-document.querySelector('#book-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  // Get form values
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-
-  // Instantiate book
-  const book = new Book(title, author);
-
-  // add Book to UI
-  Book.addBookToList(book);
-
-  // add Book to Store
-  Book.addBook(book);
-
-  // clear fields
-  Book.clearfields();
-});
-
-// Event: remove book
-
-document.querySelector('#book-list').addEventListener('click', (e) => {
-  // remove Book from UI
-  Book.deleteBook(e.target);
-
-  // remove book from local storage
-  Book.removeBook(e.target.parentElement.previousElementSibling.textContent);
-});
