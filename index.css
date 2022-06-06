@@ -109,10 +109,6 @@ hr:not([size]) {
   margin-bottom: 5%;
 }
 
-/* #contact7 {
-  display: none;
-} */
-
 footer {
   position: fixed;
   top: 90vh;
