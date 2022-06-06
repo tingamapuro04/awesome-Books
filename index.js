@@ -64,4 +64,8 @@ contactUs.addEventListener('click', () => {
   form.style.display = 'none';
 });
 
+window.addEventListener('load', () => {
+  listComplete.style.display = 'block';
+});
+
 date.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
