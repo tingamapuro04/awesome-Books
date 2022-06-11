@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 24px;
+  width: 100vw;
+  font-family: Abel, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f8f8f8;
+}
+
+header {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #9b9e9d;
+  padding: 8px;
+}
+
+.border-right {
+  border-right: 1px solid #9b9e9d;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to top, #fff000 0%, #000fff 100%);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-link a {
+  text-decoration: none;
+  padding: 0 8px;
+  color: inherit;
+}
+
+.datetime {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  text-align: center;
+  margin: 12px 0;
+  color: #425cec;
+}
+
+.container {
+  width: 100%;
+  margin: 24px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+form input {
+  margin: 8px 0;
+  padding: 12px;
+  outline: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form button {
+  margin: 8px 0;
+  padding: 8px;
+  width: 80px;
+}
+
+.contact-details {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.info {
+  margin: 24px 0;
+}
+
+.list {
+  list-style-type: none;
+  margin: 12px 0;
+  border: 1px solid #9b9e9d;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+.list-item {
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-btn {
+  padding: 5px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  background-color: #425cec;
+  border-radius: 5px;
+}
+
+.booklist {
+  display: block;
+}
+
+.addnew {
+  display: none;
+}
+
+.contacts {
+  display: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f8f8;
+  width: 100%;
+  padding: 8px;
+}
+
+.nav-link a:active {
+  color: #425cec;
+}
+
+.nav-link a:hover {
+  color: #425cec;
+}
+
+.nav-link a:focus {
+  color: #425cec;
+}
