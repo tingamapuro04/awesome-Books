@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const navigationMenu = () => {
   const listSection = document.querySelector('.booklist');
   const addSection = document.querySelector('.addnew');
