@@ -5,99 +5,80 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
-  <link rel="stylesheet" href="index.css">
-
-  <title>Booklist</title>
+  <title>Awesomebook - A collection of books</title>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
   <header>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Awesome Books</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-          aria-controls="navbarColor03" aria-expanded="true" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse show" id="navbarColor03">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item" id="list">
-              <a class="nav-link active firstOne" href="#">List
-                <span class="sipan">|</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="add" href="#">Add new <span class="sipan">|</span></a>
-            </li>
-            <li class="nav-item" id="contact1">
-              <a class="nav-link"  href="#">Contact</a>
-            </li>
-            
-          </ul>
-          
-        </div>
-      </div>
+    <nav class="menu">
+      <a href="index.html" class="logo">Awesome Books</a>
+      <ul class="navbar">
+        <li class="nav-link border-right">
+          <a href="#booklist-section" id="bookslist">List</a>
+        </li>
+        <li class="nav-link border-right">
+          <a href="#addnew-section" id="addbooks">Add New</a>
+        </li>
+        <li class="nav-link">
+          <a href="#contact-section" id="contact">Contact</a>
+        </li>
+      </ul>
     </nav>
-
-    <div class="Date"></div>
-
+    <div class="datetime">
+      <p>Current Date</p>
+    </div>
   </header>
 
-
-
-
-    <h1 class="text-center mt-5 awesome-h1">All awesome books</h1>
-    <div class=" all-box">
-      <table class="table table-striped table-box ">
-        <tbody id="book-list"></tbody>
-      </table>
-    </div>
-    
-
-
-  <div class="container add-box Addition mt-3">
-    <h1 class="display-6 heading pb-4">Add a new book</h1>
-
-    <form id="book-form">
-      <div class="form-group">
-        <label for="title"></label>
-        <input type="text" id="title" class="form-control border border-dark border-3" placeholder="Title">
+  <main>
+    <section class="booklist" id="booklist-section">
+      <div class="title">
+        <h2>All awesome books</h2>
       </div>
-
-
-      <div class="form-group">
-        <label for="author"></label>
-        <input type="text" id="author" class="form-control border border-dark border-3" placeholder="Author">
+      <div class="container">
+        <ul class="list"></ul>
       </div>
+    </section>
 
-      <input type="submit" value="add" class="btn btn-light border border-dark border-3 btn-block mt-3 vutton">
-    </form>
+    <section class="addnew" id="addnew-section">
+      <div class="title">
+        <h2>Add a new book</h2>
+      </div>
+      <div class="container">
+        <form id="form">
+          <input type="text" id="title-input" name="title" placeholder="Title" required />
+          <input type="text" id="author-input" name="author" placeholder="Author" required />
+          <div class="btn">
+            <button type="submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-  </div>
+    <section class="contacts" id="contact-section">
+      <div class="title">
+        <h2>Contact Information</h2>
+      </div>
+      <div class="container">
+        <div class="contact-details">
+          <p>Do you have any question or you just want to say "Hello"?</p>
+          <p>You can reach out to us!</p>
+          <ul class="info">
+            <li>Our Email : mail@mail.com</li>
+            <li>Our Phone number : +255765190746</li>
+            <li>Our Address : Plot 234, Makao Makuu, Dodoma, Tanzania</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <div class="contact justify-content-center align-items-center" id="contact7">
-    <h2>Contact Information</h2>
-    <div class="info">
-      <p>Do you have any question or you just want to say Hello? <br>
-      You can reach out to us</p>
-      <ul>
-        <li>Our e-mail: lliloli@gmail.com</li>
-        <li>Our phone number: +01004872515</li>
-        <li>Our address: stoke Street lane 45</li>
-      </ul>
+  <footer class="footer">
+    <div class="copyright">
+      <p>&copy;2022 Awesomebooks, All rights reserved.</p>
     </div>
-  </div>
-
-  <footer>
-    <P>Copyright Aladin &copy; 2022</P>
   </footer>
-  <script type="module" src="index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script type='module' src='./index.js'></script>
 </body>
 
 </html>

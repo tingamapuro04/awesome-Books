@@ -1,72 +1,30 @@
-import { DateTime } from './modules/luxon.js';
-import Book from './modules/index1.js';
+import * as menu from './modules/menu.js';
+import { Book } from './modules/storage.js';
+import { DateTime } from './modules/luxon.min.js';
 
-const listOfBooks = document.querySelector('#list');
-const addBooks = document.querySelector('#add');
-const contactUs = document.querySelector('#contact1');
-const contact = document.querySelector('.contact');
-const listComplete = document.querySelector('.all-box');
-const awesomeH1 = document.querySelector('.awesome-h1');
-const date = document.querySelector('.Date');
+menu.navigationMenu();
 
-// Events: display books
-document.addEventListener('DOMContentLoaded', Book.displayBooks());
+const now = DateTime.now();
+const dateTime = document.querySelector('.datetime p');
+dateTime.textContent = now.toJSDate();
 
-// Event: add a book
-document.querySelector('#book-form').addEventListener('submit', (e) => {
+const titleInput = document.querySelector('#title-input');
+const authorInput = document.querySelector('#author-input');
+
+const bk = new Book(titleInput, authorInput);
+
+document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
-  // Get form values
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-
-  // Instantiate book
-  const book = new Book(title, author);
-
-  // add Book to UI
-  Book.addBookToList(book);
-
-  // add Book to Store
-  Book.addBook(book);
-
-  // clear fields
+  bk.addbook();
   Book.clearfields();
+  Book.fetchbooks();
 });
 
-// Event: remove book
+Book.fetchbooks();
 
-document.querySelector('#book-list').addEventListener('click', (e) => {
-  // remove Book from UI
-  Book.deleteBook(e.target);
-
-  // remove book from local storage
-  Book.removeBook(e.target.parentElement.previousElementSibling.textContent);
+document.querySelectorAll('#remove-book').forEach((button, id) => {
+  button.addEventListener('click', () => {
+    Book.removebook(id);
+    Book.fetchbooks();
+  });
 });
-
-const form = document.querySelector('.add-box');
-addBooks.addEventListener('click', () => {
-  form.style.display = 'block';
-  contact.style.display = 'none';
-  listComplete.style.display = 'none';
-  awesomeH1.style.display = 'none';
-});
-
-listOfBooks.addEventListener('click', () => {
-  listComplete.style.display = 'block';
-  awesomeH1.style.display = 'block';
-  contact.style.display = 'none';
-  form.style.display = 'none';
-});
-
-contactUs.addEventListener('click', () => {
-  contact.style.display = 'flex';
-  listComplete.style.display = 'none';
-  awesomeH1.style.display = 'none';
-  form.style.display = 'none';
-});
-
-window.addEventListener('load', () => {
-  listComplete.style.display = 'block';
-  awesomeH1.style.display = 'block';
-});
-
-date.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
