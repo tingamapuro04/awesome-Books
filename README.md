@@ -1,5 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+# Preview
+![](images/awesome.jpeg)
+
 # awesome-Books
 An application to add, store and remove books to and from local storage. This application is built with technologies such as Bootstrap, CSS and javascript. I t allows users to keep track of books; They can add a book, edit the book input and remove a book if they want to.
 
